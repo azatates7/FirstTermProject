@@ -1,0 +1,131 @@
+
+İÇİNDEKİLER
+
+GİRİŞ
+ÖZET
+PROJE HEDEFİ
+SİMGELER VE KISALTMALAR
+KULLANILAN MATERYALLER
+ -ARDUİNO UNO
+ -BREADBOARD
+ -PIR SENSOR
+ -OV7670 ARDUINO KAMERA
+ -JUMPER KABLO 
+ -DİRENÇLER
+ -LED
+ -ELEKTRİK BANDI
+FİZİBİLİTELER
+FİZİBİLİTE NEDİR?
+ -TEKNİK FİZİBİLİTE
+ -YASAL FİZİBİLİTE
+ -FİNANSAL FİZİBİLİTE
+ -GANT ŞEMASI(ZAMAN ÇİZELGESİ)
+DİYAGRAMLAR
+ -USE CASE(KULLANIM SENARYOSU)
+ -SINIF DİYAGRAMLARI 
+ -KULLANICI SENARYOLARI
+PROJE DEVRE ŞEMASI
+ARDUİNO KODU
+JAVA KODU
+PROJENİN ÇALIŞTIRILMASI
+SONUÇLAR VE ÖNERİLER
+KAYNAKLAR
+PROJE EKİBİ
+ÖZGEÇMİŞ-I
+ÖZGEÇMİŞ-II
+
+
+GİRİŞ 
+*Projemizde amacımız hareket  sensör görüş alanında hareket eden nesneleri yakalayıp fotoğrafı çekip 
+   sisteme kaydetmek. (foto-treps)(foto-kapan)
+*Sistem bilgisayardan aldığı güç ve yazılım içerikleri ile çalışmakta ve çıktıyı 
+   tekrar bilgisayara kaydetmekte.
+*Sistemimiz başta güvenlik olmak üzere bir çok farklı alanda kullanılabilmektedir.
+ 
+
+ÖZET
+*Bu projede arduino modülü kullanılarak hareket alanına giren nesnelerin görüntülerinin yakalanıp 
+    bilgisayarda kaydedilmesi hedefelenmektedir.
+*Bu projede Arduino UNO temel modüldür.
+*Proje temelde devre, java kodu ve arduino kodu olmak üzere 3 parçada incelenebilir.
+*Bu proje için bir çok internet sitesinden yararlanılmış ve bu kaynaklar kaynakça 
+   bölümünde belirtilmiştir.
+
+
+SİMGELER VE KISALTMALAR
+Boyut                Birim                Simge 
+Gerilim              Volt                   V
+Uzunluk              Metre             m 
+Zaman                Saniye            s
+Direnç               Ohm             <ohm>
+Akım                 Amper              A
+
+
+SE = Standard Edition
+JAR = Java ARchieve
+JDK = Java Development Kit 
+USB = Universal Serial Bus
+COM = Communication Port
+REG = Register
+MTX = Matrix
+CLK = Clock
+VGA = Video Graphics Array
+AUX = Auxiliary
+RGB = Red Green Blue
+AVR = Alf & Vegard’s RISC Processing
+
+GND = Ground(Supply)
+VCC = Voltage Common Collector(Supply)
+RESET = Reset (Active Low)(Input)
+PWDN = Power Down (Active high)(Input)
+HREF = Horizontal Synchronization(Output)
+VSYNC = Vertical Synchronization(Output)
+SIOC = SCCB Clock(Input)
+SIOD = SCCB Data(Input/Output)
+PCLK = Pixel Clock(Output)
+XCLK = System Clock(Input)
+D0-D7 = Video Parallel Output(Output)
+ 
+FİZİBİLİTE NEDİR
+Fizibilite sözcüğü TDK’nın sözlüğüne göre ‘yapılabilirlik’ anlamını taşır. Fizibilite en basit tanımıyla, bir projenin seçilmiş kıstaslara göre uygulanabilir olup olmadığının saptanmasıdır.
+Bir yatırım projesinin, yapılabilirliği ancak bir fizibilite raporuyla belli olur. Çünkü fizibilite raporu projenin ekonomik, teknik ve hukuki açıdan etkinliğini araştırır, ortaya bu konularla ilgili bilimsel gerçekler koyar. Öncelikle projenin gerçekten hayata geçirilip geçirilemeyeceğini belirler, sonra da seçilen kriterleri sağlayıp sağlayamadığını değerlendirir. Eğer projenin uygulanması yönünde karar alınırsa, son olarak bu uygulama için alternatif yaklaşım ve çözümler sunar.
+
+TEKNİK FİZİBİLİTE
+Kullanım kolaylığı için Windows 10 İşletim Sistemi
+COM5 veya dahili bir COM portu(Sistem başka bir portu kllanıyorsa Java kodu ona göre düzenlenmeli)
+  (COM portları sadece Windows 7/8/8.1/10 işletim sistemi bilgisayarlar içindir) 
+    (Linux bilgisayarlar da port ttyACM0 veya ttyUSB0  olduğundan desteklemez)
+      (MAC bilgisayarlar da tty.usbmodem* veya tty.usbserial* olduğundan desteklenmez)
+Dijital ve Analog girişleri destekleyen Arduino UNO mikroişlemci
+Bağlantı tipine göre Dişi-Erkek, Erkek-Erkek veya Dişi-Dişi Kablolar ile kurulan ara bağlantılar
+Arduino ile tam uyumlu OV7670 Kamera
+Arduino ile tam uyumlu pir sensor(hareket sensörü)
+Devrenin zarar görmesini engelleyen dirençler
+Devrenin çalışıp çalışmadığını kontrol eden LED
+Eclipse Oxygen IDE, Java SE 8(jdk 1.8_202)
+Arduino IDE(v1.8.10)
+Bağlantıları sağlamlaştırmak için elektrik bandı
+
+YASAL FİZİBİLİTE
+ -Açık Kaynak Kodlu Eclipse IDE kullanıldığı için ücretsiz IDE(Oxygen)
+ -Açık Kaynak Kodlu JDK 8 Sürümü
+ -Açık Kaynak Kodlu Arduino IDE
+ -Açık Kaynak Kodlu Java FX(Swing) Kütüphanesi
+
+FİNANSAL FİZİBİLİTE
+	OV7670 Kamera Modülü   42,25 ₺
+	LED(Yeşil, Kırmızı)                 1,00 ₺
+	Arduino Uno                            0,00 ₺ (Halil Nusret Buluş'tan  ödünç alındı) 
+	Dirençler                                   2,00 ₺
+	Jumper Kablolar	          17,01 ₺ 
+	Breadboard                             8,34 ₺
+	Pir Sensör                                6,95 ₺
+	Elektrik bandı                          3,00 ₺
+	
+
+
+
+
+
+
+
