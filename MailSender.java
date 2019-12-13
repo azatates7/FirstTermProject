@@ -1,4 +1,4 @@
-package mail;
+// package mail;
 
 import org.apache.commons.mail.*;
 import java.io.File;
@@ -10,10 +10,10 @@ public class MailSender {
 
     public static void main(String[] args){
         MailSender sender = new MailSender();
-        sender.sendSimpleEmail();
+        sender.sendEmail();
     }
 
-    private void sendSimpleEmail(){
+    private void sendEmail(){
 
         String userName = "testmailjavaapache@gmail.com";
         String password = "Apachemail1234";
@@ -45,9 +45,11 @@ public class MailSender {
             email.send();
             System.out.println("File Sended Succesfully");
         }
+        
         catch(Exception ex){
             System.out.println("An Error Detected : "+ex.getMessage());
         }
+        
     }
 }
 
