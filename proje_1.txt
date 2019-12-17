@@ -5,21 +5,20 @@ GİRİŞ
 ÖZET
 PROJE HEDEFİ
 SİMGELER VE KISALTMALAR
-KULLANILAN MATERYALLER
+FİZİBİLİTELER
+FİZİBİLİTE NEDİR?
+ -TEKNİK FİZİBİLİTE
+ -YASAL(HUKUKİ) FİZİBİLİTE
+ -FİNANSAL FİZİBİLİTE
+ -GANT ŞEMASI(ZAMAN ÇİZELGESİ)
+KULLANILAN TEMEL MATERYALLER
  -ARDUİNO UNO
  -BREADBOARD
  -PIR SENSOR
  -OV7670 ARDUINO KAMERA
  -JUMPER KABLO 
  -DİRENÇLER
- -LED
- -ELEKTRİK BANDI
-FİZİBİLİTELER
-FİZİBİLİTE NEDİR?
- -TEKNİK FİZİBİLİTE
- -YASAL FİZİBİLİTE
- -FİNANSAL FİZİBİLİTE
- -GANT ŞEMASI(ZAMAN ÇİZELGESİ)
+ -LED 
 DİYAGRAMLAR
  -USE CASE(KULLANIM SENARYOSU)
  -SINIF DİYAGRAMLARI 
@@ -33,6 +32,7 @@ KAYNAKLAR
 PROJE EKİBİ
 ÖZGEÇMİŞ-I
 ÖZGEÇMİŞ-II
+ÖZGEÇMİŞ-III
 
 
 GİRİŞ 
@@ -53,12 +53,12 @@ GİRİŞ
 
 
 SİMGELER VE KISALTMALAR
-Boyut                Birim                Simge 
-Gerilim              Volt                   V
+Boyut                Birim          Simge 
+Gerilim              Volt              V
 Uzunluk              Metre             m 
 Zaman                Saniye            s
 Direnç               Ohm             <ohm>
-Akım                 Amper              A
+Akım                 Amper             A
 
 
 SE = Standard Edition
@@ -91,18 +91,18 @@ Fizibilite sözcüğü TDK’nın sözlüğüne göre ‘yapılabilirlik’ anla
 Bir yatırım projesinin, yapılabilirliği ancak bir fizibilite raporuyla belli olur. Çünkü fizibilite raporu projenin ekonomik, teknik ve hukuki açıdan etkinliğini araştırır, ortaya bu konularla ilgili bilimsel gerçekler koyar. Öncelikle projenin gerçekten hayata geçirilip geçirilemeyeceğini belirler, sonra da seçilen kriterleri sağlayıp sağlayamadığını değerlendirir. Eğer projenin uygulanması yönünde karar alınırsa, son olarak bu uygulama için alternatif yaklaşım ve çözümler sunar.
 
 TEKNİK FİZİBİLİTE
-Kullanım kolaylığı için Windows 10 İşletim Sistemi
+Kullanım kolaylığı ve çoklu port desteği için Windows 10 İşletim Sistemi
 COM5 veya dahili bir COM portu(Sistem başka bir portu kllanıyorsa Java kodu ona göre düzenlenmeli)
   (COM portları sadece Windows 7/8/8.1/10 işletim sistemi bilgisayarlar içindir) 
     (Linux bilgisayarlar da port ttyACM0 veya ttyUSB0  olduğundan desteklemez)
       (MAC bilgisayarlar da tty.usbmodem* veya tty.usbserial* olduğundan desteklenmez)
 Dijital ve Analog girişleri destekleyen Arduino UNO mikroişlemci
-Bağlantı tipine göre Dişi-Erkek, Erkek-Erkek veya Dişi-Dişi Kablolar ile kurulan ara bağlantılar
+Bağlantı tipine göre Dişi-Erkek, Erkek-Erkek ve Dişi-Dişi Kablolar ile kurulan ara bağlantılar
 Arduino ile tam uyumlu OV7670 Kamera
-Arduino ile tam uyumlu pir sensor(hareket sensörü)
+Arduino ile tam uyumlu PIR Sensor(hareket sensörü)
 Devrenin zarar görmesini engelleyen dirençler
 Devrenin çalışıp çalışmadığını kontrol eden LED
-Eclipse Oxygen IDE, Java SE 8(jdk 1.8_202)
+Eclipse Oxygen IDE, Java SE 8(jdk 1.8_172)
 Arduino IDE(v1.8.10)
 Bağlantıları sağlamlaştırmak için elektrik bandı
 
@@ -110,22 +110,40 @@ YASAL FİZİBİLİTE
  -Açık Kaynak Kodlu Eclipse IDE kullanıldığı için ücretsiz IDE(Oxygen)
  -Açık Kaynak Kodlu JDK 8 Sürümü
  -Açık Kaynak Kodlu Arduino IDE
- -Açık Kaynak Kodlu Java FX(Swing) Kütüphanesi
+ -Açık Kaynak Kodlu Java FX(FXML) Kütüphanesi
+ -Açık Kaynak Kodlu JFoenix Kütüphanesi (JAR)
+ -Açık kaynak kodlu Apache Commons Mail Kütüphanesi (JAR)
 
 FİNANSAL FİZİBİLİTE
 	OV7670 Kamera Modülü   42,25 ₺
-	LED(Yeşil, Kırmızı)                 1,00 ₺
-	Arduino Uno                            0,00 ₺ (Halil Nusret Buluş'tan  ödünç alındı) 
-	Dirençler                                   2,00 ₺
-	Jumper Kablolar	          17,01 ₺ 
-	Breadboard                             8,34 ₺
-	Pir Sensör                                6,95 ₺
-	Elektrik bandı                          3,00 ₺
+	Jumper Kablolar	       17,01 ₺ (3 farklı tip kullanıldı)
+	LED(Yeşil, Kırmızı)     1,00 ₺ (Yeşil Test Edildi Kırmızı Seçildi)
+	Arduino Uno             0,00 ₺ (Halil Nusret Buluş'tan  ödünç alındı) 
+	Dirençler               2,00 ₺ (5 farklı direnç kullanıldı)
+	Breadboard              8,34 ₺ (Orta düzey yeterli görüldü)
+	Pir Sensör              6,95 ₺ 
+	Elektrik bandı          3,00 ₺ (Kabloları sabitlemek için)
 	
-
-
-
-
-
-
+FİZİBİLİTE SONUCU
+	-Malzemelerin temini kolay ve fiyatlar makul
+	-Açık kaynak kodlu IDE ve kütüphaneler ile ücretsiz geliştirme  imkanı
+	-Teknik beceri ve destekle devre oluşturulabilir
+	-Java bilgisiyle modifiye edilebilecek kodlar
+	
+KAYNAKÇA
+	https://github.com/metinakkin/Ov7670
+	https://blog.mikrox.com.tr/fizibilite-raporu-nedir-nasil-hazirlanir/
+	https://www.arducam.com/product/arducam-ov7670-0-3-megapixel-camera-module-for-arduino-boards/
+	http://embeddedprogrammer.blogspot.com/2012/07/hacking-ov7670-camera-module-sccb-cheat.html
+	https://circuitdigest.com/microcontroller-projects/how-to-use-ov7670-camera-module-with-arduino
+	https://www.youtube.com/watch?v=iIlXHo9wG3Q (Arduino ile Led Yakmak - Blink Uygulaması #2 -Robotistan)
+	https://www.youtube.com/watch?v=_2JJ29kmwRU&list=PLDRcccSktQd5mfXDtGv975V77RCrW6H7U&index=2 (Arduino Nedir? Nasıl 				Kurulur ve Neler Yapılabilir? #1 -Robotistan)
+	https://www.youtube.com/watch?v=jgPZsxYvSIk&list=PLDRcccSktQd5mfXDtGv975V77RCrW6H7U&index=11 (Arduino ile Ultrasonik 				   Sensör (HC-SR04) Kullanımı - Park Sensörü Yapımı -Robotistan)
+	https://www.devreokulu.com/DirencHesaplama.html
+	https://create.arduino.cc/projecthub/techmirtz/visual-capturing-with-ov7670-on-arduino-069ebb
+	https://www.teachmemicro.com/arduino-camera-ov7670-tutorial/
+	https://www.electronics-lab.com/using-ov7670-camera-sensor-arduino/
+	http://acoptex.com/project/254/basics-project-052a-ov7670-camera-sensor-module-without-fifo-ram-at-acoptexcom				      /#sthash.x99DafwZ.dpbs
+	https://www.instructables.com/id/OV7670-Arduino-Camera-Sensor-Module-Framecapture-T/
+	https://maartentech.wordpress.com/arduino-projects/ov7670-camera-module/
 
