@@ -86,6 +86,7 @@ public class SimpleReadedited {
 
                 BMP bmp = new BMP();
                 bmp.saveBMP("C:/Users/DK/Downloads/dk/" + sdf.format(date) + ".bmp", rgb2);
+                System.out.println("Saved image: " + counter);
                 String filename = "C:/Users/DK/Downloads/dk/" + sdf.format(date) + ".bmp";
                 File file = new File(filename);
                 if (!file.exists()) {
@@ -95,6 +96,7 @@ public class SimpleReadedited {
                 mailaddress.add("azatates4977@gmail.com");
                 mailaddress.add("1160606001@nku.edu.tr");
                 mailaddress.add("emilianojonathan77@gmail.com");
+                mailaddress.add("hikmetarasdk@gmail.com");
                 for (String mail : mailaddress) {
                     HtmlEmail email = new HtmlEmail();
                     email.setHostName("smtp.gmail.com");
@@ -109,10 +111,7 @@ public class SimpleReadedited {
 
                     email.addTo(mail);
                     email.send();
-                    System.out.println("File Sended Succesfully");
-                    System.out.println("Saved image: " + counter);
-
-
+                    System.out.println("File Sended Succesfully"); 
                 }
             }
         }
