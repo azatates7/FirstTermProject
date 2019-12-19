@@ -93,9 +93,8 @@ public class SimpleReadedited {
                     System.out.println("File Not Created");
                 }
                 ArrayList<String> mailaddress = new ArrayList<String>();
-                mailaddress.add("azatates4977@gmail.com");
-                mailaddress.add("1160606001@nku.edu.tr");
-                mailaddress.add("emilianojonathan77@gmail.com");
+                mailaddress.add("enes.kapucu@outlook.com.tr");
+                mailaddress.add("azatates4977@gmail.com"); 
                 mailaddress.add("hikmetarasdk@gmail.com");
                 for (String mail : mailaddress) {
                     HtmlEmail email = new HtmlEmail();
