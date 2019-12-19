@@ -37,7 +37,7 @@ public class SimpleReadedited {
          portId = (CommPortIdentifier) portList.nextElement();
             if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
              System.out.println("Port name: " + portId.getName());
-                if (portId.getName().equals("COM5")) {
+                if (portId.getName().equals("COM5")) { // port kontrolü
                  SimpleRead reader = new SimpleRead();
                 }
             }
@@ -48,7 +48,7 @@ public class SimpleReadedited {
         int[][] rgb = new int[HEIGHT][WIDTH];
         int[][] rgb2 = new int[WIDTH][HEIGHT];
 
-        try {
+        try { //HATA KONTROL BLOĞU
             serialPort = (SerialPort) portId.open("SimpleReadApp", 1000);
             inputStream = serialPort.getInputStream();
 
@@ -65,7 +65,7 @@ public class SimpleReadedited {
                 while (!isImageStart(inputStream, 0)) {
                 }
 
-                System.out.println("Found image: " + counter);
+                System.out.println("Found image : " + counter); //Çalışma anında bulunan resim sayısı
 
                 for (int y = 0; y < HEIGHT; y++) {
                     for (int x = 0; x < WIDTH; x++) {
@@ -80,42 +80,47 @@ public class SimpleReadedited {
 
                     }
                 }
-
+                // dosya adı için zaman bilgisi elde etme
                 DateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
                 Date date = new Date();
-
+                
+                // bmp formatında resim kaydetme
                 BMP bmp = new BMP();
                 bmp.saveBMP("C:/Users/DK/Downloads/dk/" + sdf.format(date) + ".bmp", rgb2);
-                System.out.println("Saved image: " + counter);
+                System.out.println("Saved image : " + counter);
+             
+                // mail için dosya kontrolü
                 String filename = "C:/Users/DK/Downloads/dk/" + sdf.format(date) + ".bmp";
                 File file = new File(filename);
                 if (!file.exists()) {
                     System.out.println("File Not Created");
                 }
+                // toplu mail için kullanıcıları tanımlama ve mail ayarlarını yapmak
                 ArrayList<String> mailaddress = new ArrayList<String>();
                 mailaddress.add("enes.kapucu@outlook.com.tr");
                 mailaddress.add("azatates4977@gmail.com"); 
                 mailaddress.add("hikmetarasdk@gmail.com");
                 for (String mail : mailaddress) {
-                    HtmlEmail email = new HtmlEmail();
-                    email.setHostName("smtp.gmail.com");
-                    email.setSmtpPort(465);
-                    email.setAuthenticator(new DefaultAuthenticator("testmailjavaapache@gmail.com", "Apachemail1234"));
-                    email.setSSLOnConnect(true);
-                    email.setFrom("testmailjavaapache@gmail.com");
+                    HtmlEmail email = new HtmlEmail(); // email nesnesi yaratılıyor
+                    email.setHostName("smtp.gmail.com"); // host ayarı tanımlama
+                    email.setSmtpPort(465); // port bilgisi tanımlama
+                    email.setAuthenticator(new DefaultAuthenticator
+                         ("testmailjavaapache@gmail.com", "Apachemail1234")); // güvenlik ayarları yapılmış yönlendirme servisi
+                    email.setSSLOnConnect(true); // ssl desteğini aktif etme
+                    email.setFrom("testmailjavaapache@gmail.com"); 
 
-                    email.setSubject("Test Mail");
-                    email.setMsg("Test Mail Sended");
-                    email.attach(file);
+                    email.setSubject("Test Mail"); // konu
+                    email.setMsg("Test Mail Sended"); // mesaj
+                    email.attach(file); // gönderilecek dosya
 
-                    email.addTo(mail);
-                    email.send();
+                    email.addTo(mail); // mail adresi bilgisi ekleme
+                    email.send(); // gönder
                     System.out.println("File Sended Succesfully"); 
                 }
             }
         }
         catch (IOException | EmailException | PortInUseException ex) {
-            System.out.println("Hata Algılandı : " + ex.getMessage());
+            System.out.println("Hata Algılandı : " + ex.getMessage()); // hata yakalama
         }
     }
 
