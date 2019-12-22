@@ -14,6 +14,7 @@ FİZİBİLİTE NEDİR?
 FİZİBİLİTE SONUCU
 KULLANILAN TEMEL MATERYALLER
  -ARDUİNO UNO
+ -ARDUINO UNO USB KABLOSU
  -BREADBOARD
  -PIR SENSOR
  -OV7670 ARDUINO KAMERA
@@ -142,7 +143,8 @@ KAYNAKLAR / RESOURCES
 	https://www.youtube.com/watch?v=NoeeYSo0jeg&list=PLDRcccSktQd5mfXDtGv975V77RCrW6H7U&index=17 (Arduino Hareket Sensörü 				    Kullanımı (PIR Sensörü) -Robotistan)
 	https://www.devreokulu.com/DirencHesaplama.html
 	https://github.com/metinakkin/Ov7670
-	https://github.com/ArduCAM/Arduino
+	https://github.com/ArduCAM/Arduino 
+	https://diyot.net/arduino-uno-r3/ 
 	https://www.open-electronics.org/a-complete-guide-to-arduino-based-video-camera/
 	http://www.alselectro.com/arduino-camera-ov7670.html
 	https://hub360.com.ng/product/ov7670-camera-module-for-arduino/
@@ -150,12 +152,25 @@ KAYNAKLAR / RESOURCES
 	https://www.teachmemicro.com/arduino-camera-ov7670-tutorial/
 	https://www.electronics-lab.com/using-ov7670-camera-sensor-arduino/
 	http://acoptex.com/project/254/basics-project-052a-ov7670-camera-sensor-module-without-fifo-ram-at-acoptexcom				      /#sthash.x99DafwZ.dpbs
+	https://maker.robotistan.com/breadboard/
+	https://dersimizkodlama.com/jumper-kablo-nedir/
+	https://www.guvenlikonline.com/makale/219/pir-sensor.html
+	http://devreokulu.com/LedAnotKatot.html
+	https://robotizmo.net/vga-kamera-modulu-ov7670-41
+	https://maker.robotistan.com/direnc/
+	https://maker.robotistan.com/raspberry-pi-dersleri-10-pir-sensor-ile-hareket-algilama/
+	https://www.robotistan.com/hc-sr501-ayarlanabilir-ir-hareket-algilama-sensoru-pir
+	https://maker.robotistan.com/led/
+	https://www.robotekno.com/arduino-kamera-modulu-ov7670-pic-kamera-modulu
+	https://shop.rasp.io/products/assorted-breadboarding-jumper-wires-dupont-connector-female-male-10cm-prototyping-                                                			     raspberry-pi
 	https://www.instructables.com/id/OV7670-Arduino-Camera-Sensor-Module-Framecapture-T/
 	https://maartentech.wordpress.com/arduino-projects/ov7670-camera-module/
 	https://hkalasua.wordpress.com/2017/09/11/ov7670-arduino-sd/
 	https://lucidar.me/en/arduino/camera-ov7670-and-arduino/
 	Pınar Tüfekçi Sistem Analizi ADYS Notları
 	Alpay Doruk Yazılım Mühendisliği ADYS Notları
+	https://maker.robotistan.com/arduino-uno/
+	https://hayaletveyap.com/arduino-uno-r3-nedir/
 	https://www.slideshare.net/SomnathSharma4/arduino-camera-interfacing-ov7670
 	http://kathyjan.blogspot.com/2014/12/how-to-use-ov7670-camera-module-with.html
 	https://urun.n11.com/diger/ov7670-vga-kamera-modulu-P378338174
