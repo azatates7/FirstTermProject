@@ -43,7 +43,9 @@ GİRİŞ
 *Sistem bilgisayardan aldığı güç ve yazılım içerikleri ile çalışmakta ve çıktıyı 
    tekrar bilgisayara kaydetmekte.
 *Sistemimiz başta güvenlik olmak üzere bir çok farklı alanda kullanılabilmektedir.
- 
+
+PROJE HEDEFİ
+*Projemiz alan güvenliği konusunda bize yardımcı olmak üzere tanımlanmış bir modül sunar.
 
 ÖZET
 *Bu projede arduino modülü kullanılarak hareket alanına giren nesnelerin görüntülerinin yakalanıp 
@@ -131,6 +133,19 @@ FİZİBİLİTE SONUCU
 	-Teknik beceri ve destekle devre oluşturulabilir.
 	-Java bilgisiyle modifiye edilebilecek kodlar mevcut.
 	-Mail için Java Mail API ve Apache Common Mail API yeterli olacaktır.
+	
+PROJENİN ÇALIŞTIRILMASI
+	-Kabloyu bilgisayara tak.
+	-Arduino programını aç.
+	-Arduino Programında portu kontrol et aktif değilse aktifleştir.
+	-Arduino Kodunu derle hata varsa ayıkla.
+	-Arduino kodunu yükle.
+	-Java IDE (Eclipse vb.) aç.
+	-IDE'de Proje içerisinde yer alan SimpleRead class'ını çalıştır.
+	-Hata alınırsa kabloyu çıkarıp tekrar takınız(Port Çakışması)
+	-Hata alınmazsa hareket sensörü devreye girdikçe Java Kodu Arduino yu tetikler ve kameradan kaydedilen görüntüler 
+	 java kodu aracılığıyla .bmp formatında bilgisayara kaydedilir.
+	-Kaydedilen her resim belirlenen kişilere toplu olarak yollanır.
 	
 KAYNAKLAR / RESOURCES
 	https://blog.mikrox.com.tr/fizibilite-raporu-nedir-nasil-hazirlanir/
