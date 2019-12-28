@@ -1,4 +1,4 @@
- #include </home/azatates7//Downloads/Project/camera/module.h>
+ #include </home/azatates7/Downloads/Project/camera/module.h>
 
 void setup(){
   int pirPin = 9;  // PIR pin
