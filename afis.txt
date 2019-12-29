@@ -10,8 +10,7 @@
      
 
 SONUÇ
-     Projemizde amacımız hareket  sensör görüş alanında hareket eden nesneleri yakalayıp fotoğrafı çekip 
-            sisteme kaydetmek. (foto-treps)(foto-kapan)
+     Projemizde amacımız hareket  sensör görüş alanında hareket eden nesneleri yakalayıp fotoğrafı çekip sisteme kaydetmek ve kaydedilen görüntüleri belirlenen kişilere mail atmak . (foto-treps)(foto-kapan)
      Sistem bilgisayardan aldığı güç ve yazılım içerikleri ile çalışmakta ve çıktıyı tekrar bilgisayara kaydetmekte.
      Sistemimiz başta güvenlik olmak üzere bir çok farklı alanda kullanılabilmektedir.
      
