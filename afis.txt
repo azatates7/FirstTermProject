@@ -1,0 +1,27 @@
+    
+GİRİŞ
+
+    • Projemizde amacımız hareket  sensör görüş alanında hareket eden nesneleri yakalayıp fotoğrafı çekip 
+            sisteme kaydetmek. (foto-treps)(foto-kapan)
+    • Sistem bilgisayardan aldığı güç ve yazılım içerikleri ile çalışmakta ve çıktıyı 
+            tekrar bilgisayara kaydetmekte.
+    • Sistemimiz başta güvenlik olmak üzere bir çok farklı alanda kullanılabilmektedir.
+
+
+
+
+
+
+ÖZET
+
+    • Bu projede arduino modülü kullanılarak hareket alanına giren nesnelerin görüntülerinin yakalanıp 
+bilgisayarda kaydedilmesi hedeflenmektedir.
+    • Bu projede Arduino UNO temel modüldür.
+    • Proje temelde devre, java kodu ve arduino kodu olmak üzere 3 parçada incelenebilir.
+
+     
+
+ PROJE HEDEFİ
+
+    • Projemiz alan güvenliği konusunda bize yardımcı olmak üzere tasarlanmış bir modül sunar.
+    • Hareket sensörü aracılığıyla hareketleri algılayıp kamerayı tetiklemek ve alınan görüntüyü hem kaydetmek   hem de belirlenen kişilere mail atmak projenin temel mimarisidir.
